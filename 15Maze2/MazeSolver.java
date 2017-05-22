@@ -74,9 +74,11 @@ public class MazeSolver {
 				}
 			}
 		}
-		while (current!=null){
-			maze.set(current.getRow(), current.getCol(), '@');
-			current=current.getPrev();
+		if(solved){
+			while (current!=null){
+				maze.set(current.getRow(), current.getCol(), '@');
+				current=current.getPrev();
+			}
 		}
 		maze.set(maze.getStart().getRow(), maze.getStart().getCol(), 'S');
 		maze.set(maze.getEnd().getRow(), maze.getEnd().getCol(), 'E');
