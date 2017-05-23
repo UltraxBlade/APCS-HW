@@ -82,6 +82,12 @@ public class MazeSolver {
 		}
 		maze.set(maze.getStart().getRow(), maze.getStart().getCol(), 'S');
 		maze.set(maze.getEnd().getRow(), maze.getEnd().getCol(), 'E');
-		System.out.println(maze);
+		if(animate){
+			System.out.println(maze);
+		}
+	}
+	
+	public String toString(){
+		return maze.toString();
 	}
 }
